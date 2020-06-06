@@ -1,0 +1,25 @@
+@mixin parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  @mixin center-image {
+      display: grid;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  @mixin medium{
+      @media(max-width: 1200px){
+          @content;
+      }
+  }
+  
+  @mixin small{
+      @media(max-width: 800px){
+          @content;
+      }
+  }

@@ -1,4 +1,340 @@
+@import url(//db.onlinewebfonts.com/c/b46dfdc01f7e44ca7a5fa53ee588dfd3?family=Angella+Narrow);
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button, submit {
+  border: none;
+}
+
+input {
+  border-top-color: none;
+  border-left-color: none;
+}
+
 body {
   background: #e2e2e2;
+}
+
+#header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+
+#header img {
+  /*border-style: solid;*/
+  height: 60px;
+  position: absolute;
+  margin: 0 0 0 2%;
+}
+
+#header a img {
+  /*border-style: solid;*/
+  height: 50px;
+  right: 5%;
+  margin-top: 5px;
+  opacity: 60%;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #header a img {
+    visibility: hidden;
+  }
+}
+
+#header #nav {
+  /*border-style: solid;*/
+  margin: 40px auto 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+#header #nav a {
+  font-family: Angella Narrow;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+#header #nav a:hover {
+  color: yellow;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+@media (max-width: 800px) {
+  #header #nav a {
+    visibility: hidden;
+  }
+}
+
+#header #nav a:nth-child(1) {
+  color: yellow;
+}
+
+#toggle-btn {
+  position: absolute;
+  right: 5%;
+  top: 28px;
+  -webkit-transition: left 100ms linear 0ms,-webkit-transform 200ms ease 100ms;
+  transition: left 100ms linear 0ms,-webkit-transform 200ms ease 100ms;
+  transition: left 100ms linear 0ms,transform 200ms ease 100ms;
+  transition: left 100ms linear 0ms,transform 200ms ease 100ms,-webkit-transform 200ms ease 100ms;
+  position: fixed;
+  visibility: hidden;
+}
+
+#toggle-btn .active {
+  /*left:210px;*/
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#toggle-btn span {
+  position: relative;
+  top: 0px;
+  display: block;
+  background: #0000FF;
+  width: 35px;
+  height: 5px;
+  margin: 5px 0px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 259ms ease 120ms;
+  transition: -webkit-transform 259ms ease 120ms;
+  transition: transform 259ms ease 120ms;
+  transition: transform 259ms ease 120ms, -webkit-transform 259ms ease 120ms;
+}
+
+@media (max-width: 800px) {
+  #toggle-btn {
+    visibility: visible;
+  }
+}
+
+#intro {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/Images/Layouts/dotted-colors-background.png");
+  /*background-size: 100%;
+    height: 900px;
+    width: 100%;*/
+}
+
+#intro img {
+  display: -ms-grid;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  /*border-style: solid;*/
+  height: 500px;
+  padding-top: 150px;
+}
+
+@media (max-width: 800px) {
+  #intro img {
+    height: 400px;
+  }
+}
+
+#intro p {
+  text-align: center;
+  /*border-style: solid;*/
+  width: 50%;
+  margin: 10px auto;
+  font-family: Corbel;
+  line-height: 25px;
+}
+
+@media (max-width: 800px) {
+  #intro p {
+    width: 300px;
+    margin: 50px auto;
+    font-size: 14px;
+  }
+}
+
+#best-sellers {
+  background-image: url("/Images/Layouts/manga-background.png");
+  background-size: 100%;
+  height: 1080px;
+  width: 100%;
+  padding-top: 180px;
+}
+
+@media (max-width: 800px) {
+  #best-sellers {
+    height: 1380px;
+  }
+}
+
+#best-sellers h1 {
+  text-align: center;
+  /*border-style: solid;*/
+  width: 400px;
+  margin: 10px auto;
+  font-family: Corbel;
+  font-weight: 400;
+  color: #0000FF;
+  line-height: 25px;
+  letter-spacing: 10px;
+}
+
+#best-sellers .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+  margin: 100px auto 100px auto;
+  /*border-style: solid;*/
+}
+
+@media (max-width: 1200px) {
+  #best-sellers .grid-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  #best-sellers .grid-container {
+    -ms-grid-columns: 0;
+        grid-template-columns: 0;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    width: 225px;
+  }
+}
+
+#best-sellers .grid-container .grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  /*grid-template-rows: repeat(2, 1fr);*/
+  /*border-style: solid; */
+  width: 220px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#best-sellers .grid-container .grid .grid-item {
+  /*border-style: solid; */
+  margin: 0 auto;
+}
+
+#best-sellers .grid-container .grid .grid-item .price, #best-sellers .grid-container .grid .grid-item .price-two {
+  display: inline-block;
+  /*width: 107px;
+                    height: 107px;*/
+  line-height: 25px;
+  text-align: center;
+  background: red;
+  border-radius: 100%;
+  height: 62px;
+  width: 62px;
+  float: left;
+  padding-left: 12px;
+  padding-right: 5px;
+  padding-top: 8px;
+  font-size: 35px;
+  font-family: Century Gothic;
+  font-weight: bold;
+  color: white;
+}
+
+#best-sellers .grid-container .grid .grid-item .price span, #best-sellers .grid-container .grid .grid-item .price-two span {
+  font-size: 12px;
+  line-height: 15px;
+  /*border-style: solid;*/
+  float: left;
+  font-weight: bold;
+  font-family: Century Gothic;
+  color: white;
+}
+
+#best-sellers .grid-container .grid .grid-item .price-two {
+  float: right;
+}
+
+#best-sellers .grid-container .grid .grid-item .menu {
+  background-image: url("/Images/Lemonade/Classic Lemonade.jpg");
+  background-size: 210px;
+  height: 210px;
+  width: 210px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: yellow;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+#best-sellers .grid-container .grid .grid-item .menu:hover {
+  background-size: 230px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+@media (max-width: 1200px) {
+  #best-sellers .grid-container .grid .grid-item .menu {
+    height: 190px;
+    width: 190px;
+  }
+}
+
+#best-sellers .grid-container .grid .grid-item .name {
+  margin-top: 20px;
+  font-family: Corbel;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  /*border-style: solid;*/
+}
+
+#best-sellers .btn-menu {
+  width: 205px;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*border-style: solid;*/
+}
+
+#best-sellers .btn-menu button {
+  width: 200px;
+  height: 50px;
+  background: red;
+  color: yellow;
+  border-radius: 20px;
+  font-family: Corbel;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+#best-sellers .btn-menu button:hover {
+  background: #c80000;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 /*# sourceMappingURL=main.css.map */
