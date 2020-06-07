@@ -18,18 +18,28 @@
         <img src = "./Images/Layouts/Logo-text-only.png">
         <a href = "https://www.facebook.com/Full-Anime-Cafe-111737960164278" target = "_blank"><img src = "./Images/Layouts/fb blue logo.png"></a>
 
-        <nav id = "nav">
-            <a href = "#">HOME</a>
+        <div id = "nav">
+            <a href = "#"><b>HOME</b></a>
             <a href = "#">ABOUT </a>
             <a href = "#">MENU</a>
             <a href = "#">CONTACTS</a>
-        </nav>
+        </div>
+
+        <div id="sidebar">
+             
+            <ul>
+              <li><a href = "#">HOME</a></li>
+              <li><a href = "#">ABOUT</a></li>
+              <li><a href = "#">MENU</a></li>
+              <li><a href = "#">CONTACTS</a></li>
+            </ul>
+          </div>
 
         
 
      </div> 
      <a href="#menu">
-     <div id="toggle-btn">
+     <div id="toggle-btn" onclick="toggleSidebar(this)">
         
             <span></span>
             <span></span>
@@ -41,7 +51,7 @@
 
     
 
-     <div id = "intro" style = "height: 1080px; width: 100%;">
+     <div id = "intro">
 
 
 
@@ -52,6 +62,11 @@
              omnis blanditiis quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, obcaecati!</p>
             
      </div>
+
+
+
+
+
 
      <div id = "best-sellers">
 
@@ -85,12 +100,12 @@
                 
                 <div class = "grid-item">
                         <div class = "price">
-                            <span>₱</span>
+                            <span>₱ &nbsp; M</span>
                             60
                         </div>
 
                         <div class = "price-two">
-                            <span>₱</span>
+                            <span>₱ &nbsp; L</span>
                             70
                         </div>
 
@@ -136,6 +151,17 @@
     
   
      </div>
+
+
+
+<script>
+
+ function toggleSidebar(ref) {
+        ref.classList.toggle('active');
+        document.getElementById('sidebar').classList.toggle('active');
+}
+
+</script>
 
     
 </body>

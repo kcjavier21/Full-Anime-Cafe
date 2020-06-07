@@ -1,6 +1,8 @@
 @import './resets';
 @import './variables';
 @import './mixins';
+@import './sidebar-nav';
+
 
 @import url(//db.onlinewebfonts.com/c/b46dfdc01f7e44ca7a5fa53ee588dfd3?family=Angella+Narrow);
 
@@ -16,12 +18,19 @@ body {
     width: 100%;
     position: fixed;
 
+    @include small {
+        padding: 15px;  
+    }
+
     img {
         /*border-style: solid;*/
         height: 60px;
         position: absolute;
         margin: 0 0 0 2%;
-
+        
+        @include small {
+            height: 50px;  
+        }
          
     }
 
@@ -49,11 +58,11 @@ body {
 
         a {
             font-family: Angella Narrow;
-            font-size: 20px;
+            font-size: 21px;
             letter-spacing: 3px;
             text-decoration: none;
             color: white;
-            margin: 10px;
+            margin: 14px;
             transition: $transition-time;
 
 
@@ -67,58 +76,28 @@ body {
                 visibility: hidden;
             }
 
+            b{
+                color: $active-color;
+            }
+
         }
 
-        a:nth-child(1){
-            color: $active-color;
-        }
+       
     }
-
     
 }
 
 
 
 
-#toggle-btn {
-    position:absolute;
-    right:5%;
-    top:28px;
-    transition:left 100ms linear 0ms,transform 200ms ease 100ms;
-    position: fixed;
-    visibility: hidden;
-    
 
-    .active {
-        /*left:210px;*/
-        transform:rotate(360deg);
-      }
 
-      span {
-         
-        position:relative;
-        top:0px;
-        display:block;
-        background: $primary-color;
-        width:35px;
-        height:5px;
-        margin:5px 0px;
-        cursor:pointer;
-        transition:transform 259ms ease 120ms;
-
-         
-        }
-
-       @include small {
-           visibility: visible;
-       } 
-  
- 
-}
+/* ================== SIDEBAR NAVIGATOR =========================*/
 
 
 
 
+  /*================================*/
 
 
 
@@ -129,9 +108,11 @@ body {
 #intro{
     @include parallax();
     background-image: url('/Images/Layouts/dotted-colors-background.png');
-    /*background-size: 100%;
-    height: 900px;
-    width: 100%;*/
+    /*background-size: 100%;*/
+    height: 1080px;
+    width: 100%;
+    min-width: 400px;
+    min-height: 500px; 
 
     img{
         @include center-image();
@@ -175,6 +156,9 @@ body {
     width: 100%;
     padding-top: 180px;
 
+    min-width: 400px;
+    min-height: 500px; 
+
     @include small {
         height: 1380px;
     }
@@ -191,6 +175,10 @@ body {
         line-height: 25px;
 
         letter-spacing: $letter-space-standard;
+
+        @include small {
+           font-size: 30px;
+        }
     }
 
 
