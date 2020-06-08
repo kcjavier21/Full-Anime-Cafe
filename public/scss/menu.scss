@@ -1,0 +1,391 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+@import './sidebar-nav';
+
+
+@import url(//db.onlinewebfonts.com/c/b46dfdc01f7e44ca7a5fa53ee588dfd3?family=Angella+Narrow);
+
+
+body {
+    background: $bg-color;
+}
+
+#header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+
+    @include small {
+        padding: 15px;  
+    }
+
+    img {
+        /*border-style: solid;*/
+        height: 60px;
+        position: absolute;
+        margin: 0 0 0 2%;
+        
+        @include small {
+            height: 50px;  
+        }
+         
+    }
+
+    a {
+        img {
+            /*border-style: solid;*/
+            height: 50px;
+            right: 5%;
+            margin-top: 5px;
+            opacity: 60%;
+            cursor: pointer;
+
+            @include small {
+                visibility: hidden;
+            }
+        }
+       
+    }
+    
+    #nav{
+        /*border-style: solid;*/
+        margin: 40px auto 0 auto;
+        width: 400px;
+        text-align: center;
+
+        a {
+            font-family: Angella Narrow;
+            font-size: 21px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: white;
+            margin: 14px;
+            transition: $transition-time;
+
+
+
+            &:hover{
+                color: $active-color;
+                transition: $transition-time;
+            }
+
+            @include small {
+                visibility: hidden;
+            }
+
+            b{
+                color: $active-color;
+            }
+
+        }
+
+       
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+#standard-format{
+   
+    background-image: url('/Images/Layouts/manga-background.png');
+    background-size: 100%;
+    height: 3160px;
+    width: 100%;
+    padding-top: 180px;
+
+    min-width: 400px;
+    min-height: 500px; 
+
+    @include small {
+        height: 2580px;
+    }
+    
+
+    h1 {
+        text-align: center;
+        /*border-style: solid;*/
+        width: 400px;
+        margin: 10px auto;
+        font-family: $font-paragraph;
+        font-weight: $font-weight-standard;
+        color: $primary-color;
+        line-height: 25px;
+
+        letter-spacing: $letter-space-standard;
+
+        @include small {
+           font-size: 30px;
+        }
+    }
+
+    h2{
+        font-family: Angella Narrow;
+        color: white;
+        text-align: center;
+        font-size: 45px;
+        letter-spacing: 10px;
+
+        margin: 100px auto 10px auto;
+
+
+        text-shadow: 0px 0px 0 rgb(247,-8,-8),
+        1px 1px 0 rgb(238,-17,-17),
+        2px 2px 0 rgb(230,-25,-25),
+        3px 3px 0 rgb(222,-33,-33),
+        4px 4px 0 rgb(213,-42,-42),
+        5px 5px 0 rgb(205,-50,-50),
+        6px 6px  0 rgb(197,-58,-58),
+        7px 7px 6px rgba(255,0,0,0.6),
+        7px 7px 1px rgba(255,0,0,0.5),
+        0px 0px 6px rgba(255,0,0,.2);
+
+
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: red;
+
+    }
+
+    #lemon{
+
+        text-shadow: 0px 0px 0 rgb(201,216,-8),
+                 1px 1px 0 rgb(192,207,-17),
+                 2px 2px 0 rgb(184,199,-25),
+                 3px 3px 0 rgb(176,191,-33),
+                 4px 4px 0 rgb(167,182,-42),
+                 5px 5px 0 rgb(159,174,-50),
+                 6px 6px  0 rgb(151,166,-58),
+                 7px 7px 6px rgba(209,224,0,0.6),
+                 7px 7px 1px rgba(209,224,0,0.5),
+                 0px 0px 6px rgba(209,224,0,.2);
+
+             -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #d1e000;
+    }
+
+    
+}
+
+
+
+
+
+
+
+.grid-container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    margin: 100px auto 100px auto;
+
+    grid-gap: 0px;
+
+    /*border-style: solid;*/
+
+    @include medium{
+        width: 80%;
+    }
+
+    @include small{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0px;
+       
+    }
+
+    .grid{
+        display: grid;
+       /* grid-gap: 10px;
+        /*grid-template-rows: repeat(2, 1fr);*/
+        /*border-style: solid; */
+        width: 220px;
+        margin: 0 auto;
+        padding: 5px;
+        
+        @include small{
+            width: 147px;
+        }
+
+        @include x-extra-small{
+            margin: 0px;
+        }
+
+        
+
+        .grid-item{
+            /*border-style: solid;*/
+            /*margin: 0 auto;*/
+            width: 217px;
+            margin: 0px;
+            margin-bottom: 50px;
+
+            @include medium{
+                width: 197px;
+            }
+
+            @include small{
+                width: 157px;
+            }
+            
+
+            .price{
+                display: inline-block;
+                /*width: 107px;
+                height: 107px;*/
+                line-height: 27px;
+                text-align: center;
+
+                background: red;
+                border-radius: 100%;
+                height: 62px;
+                width: 62px;
+                float: left;
+
+                padding-left: 12px;
+                padding-right: 5px;
+                padding-top: 8px;
+            
+
+                font-size: 35px;
+                font-family: Century Gothic;
+                font-weight: bold;
+
+                color: white;
+
+                   @include medium{
+                        width: 57px;
+                        height: 57px;
+                        font-size: 27px;
+                    }
+
+                    @include small{
+                        width: 52px;
+                        height: 52px;
+                        font-size: 25px;
+                    }
+
+                    .three-digits{
+                        font-size: 28px;
+                        transform: scale(.9, 1.2);
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 10px;
+                        /* border-style: solid; */
+                        width: 40px;
+                        
+
+                        @include medium{
+                            font-size: 23px;
+                            transform: scale(1.0, 1.1);
+                        }
+    
+                        @include small{
+                            width: 30px;
+                            font-size: 19px;
+                            padding-top: 0px;
+                            transform: scale(1.1, 1.3);
+                        }
+                    }
+        
+                   
+            
+
+                span{
+                    font-size: 12px;
+                    line-height: 15px;
+                    /*border-style: solid;*/
+                    float: left;
+                    font-weight: bold;
+                    font-family: Century Gothic;
+
+                    color: white;
+
+                    @include medium{
+                        
+                        font-size: 9px;
+                        line-height: 9px;
+                    }
+            
+                }
+            }
+
+
+
+            .price-two{
+                @extend .price;
+                float: right;
+            }
+
+            .menu{
+                /*background-image: url('/Images/Lemonade/Classic Lemonade.jpg');*/
+                background-size: 210px;
+                background-position:top;
+                height: 210px;
+                width: 210px;
+                border-radius: 100%;
+                
+                border-style: solid;
+
+                border-color: $active-color;
+                transition: $transition-time;
+
+                &:hover{
+                    background-size: 230px;
+                    transition: $transition-time;
+                }
+
+                @include medium{
+                    background-size: 190px;
+                   height: 190px;
+                   width:190px;
+
+                   &:hover{
+                    background-size: 205px;
+                    transition: $transition-time;
+                }
+                }
+
+                @include small{
+                    background-size: 150px;
+                    height: 150px;
+                    width:150px;
+
+                    &:hover{
+                        background-size: 160px;
+                        transition: $transition-time;
+                    }
+                }
+
+
+            }
+
+            .name{
+                margin-top: 20px;
+
+                font-family: $font-paragraph;
+                font-weight: 600;
+                font-size: 18px;
+
+                text-align: center;
+
+               /*border-style: solid;*/
+            }
+        }
+
+        
+
+    }
+
+}

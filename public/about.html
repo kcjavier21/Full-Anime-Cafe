@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/about.css">
+    <title>Full Anime Cafe - About</title>
+</head>
+<body>
+
+     
+    <div id = "header">
+
+        <img src = "./Images/Layouts/Logo-text-only.png">
+        <a href = "https://www.facebook.com/Full-Anime-Cafe-111737960164278" target = "_blank"><img src = "./Images/Layouts/fb blue logo.png"></a>
+
+        <div id = "nav">
+            <a href = "./home.html">HOME</a>
+            <a href = ""><b>ABOUT</b></a>
+            <a href = "./menu.html">MENU</a>
+            <a href = "./contacts.html">CONTACTS</a>
+        </div>
+
+        <div id="sidebar">
+             
+            <ul>
+              <li><a href = "./home.html">HOME</a></li>
+              <li><a href = "">ABOUT</a></li>
+              <li><a href = "./menu.html">MENU</a></li>
+              <li><a href = "./contacts.html">CONTACTS</a></li>
+            </ul>
+          </div>
+
+        
+
+     </div> 
+     <a href="#menu">
+     <div id="toggle-btn" onclick="toggleSidebar(this)">
+        
+            <span></span>
+            <span></span>
+            <span></span>
+        
+    </div>
+</a>
+
+
+
+<div id = "standard-format">
+
+    <h1>ABOUT <b>US</b></h1>
+
+    <div class = "grid-about">
+        <div class="grid-about-item">
+            <img src = './Images/customer-pictures.png'>
+        </div>
+
+        <div class="grid-about-item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde reprehenderit 
+            praesentium nisi itaque perspiciatis modi eius quis. Odit 
+            commodi magnam, mollitia blanditiis a praesentium suscipit 
+            consectetur voluptates placeat accusantium!
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde reprehenderit 
+            praesentium nisi itaque perspiciatis modi eius quis. 
+            </p>
+            
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <h2>WHY <b>CHOOSE US</b></h2>
+
+
+    <div class = "grid-choose-container">
+        <div class = "grid-choose">
+
+            <div class = "grid-choose-item">
+                <img src = "./Images/Icons/spoon-and-fork-icon.png">
+            </div>
+
+            <div class = "grid-choose-item">
+                <p>EXCELLENT FOOD SERVICE</p>
+            </div>
+
+        </div>       
+
+
+        <div class = "grid-choose">
+
+            <div class = "grid-choose-item">
+                <img src = "./Images/Icons/delivery-icon.png">
+            </div>
+
+            <div class = "grid-choose-item">
+                <p>FOOD DELIVERY</p>
+            </div>
+            
+        </div>  
+
+
+        <div class = "grid-choose">
+
+            <div class = "grid-choose-item">
+                <img src = "./Images/Icons/heart-icon.png">
+            </div>
+
+            <div class = "grid-choose-item">
+                <p>LOVED BY CUSTOMERS</p>
+            </div>
+            
+        </div>  
+
+    </div>
+
+</div>
+
+    <div id = "footer">
+        <p>© Full Anime Cafe 2020 | All rights reserved</p>
+    </div>
+   
+
+
+
+
+
+ 
+<script>
+
+    function toggleSidebar(ref) {
+           ref.classList.toggle('active');
+           document.getElementById('sidebar').classList.toggle('active');
+   }
+   
+   </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,321 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+@import './sidebar-nav';
+
+
+@import url(//db.onlinewebfonts.com/c/b46dfdc01f7e44ca7a5fa53ee588dfd3?family=Angella+Narrow);
+
+
+body {
+    background: $bg-color;
+}
+
+#header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+
+    @include small {
+        padding: 15px;  
+    }
+
+    img {
+        /*border-style: solid;*/
+        height: 60px;
+        position: absolute;
+        margin: 0 0 0 2%;
+        
+        @include small {
+            height: 50px;  
+        }
+         
+    }
+
+    a {
+        img {
+            /*border-style: solid;*/
+            height: 50px;
+            right: 5%;
+            margin-top: 5px;
+            opacity: 60%;
+            cursor: pointer;
+
+            @include small {
+                visibility: hidden;
+            }
+        }
+       
+    }
+    
+    #nav{
+        /*border-style: solid;*/
+        margin: 40px auto 0 auto;
+        width: 400px;
+        text-align: center;
+
+        a {
+            font-family: Angella Narrow;
+            font-size: 21px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: white;
+            margin: 14px;
+            transition: $transition-time;
+
+
+
+            &:hover{
+                color: $active-color;
+                transition: $transition-time;
+            }
+
+            @include small {
+                visibility: hidden;
+            }
+
+            b{
+                color: $active-color;
+            }
+
+        }
+
+       
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+#standard-format{
+   
+    background-image: url('/Images/Layouts/manga-background.png');
+    background-size: 100%;
+    height: 1380px;
+    width: 100%;
+    padding-top: 180px;
+
+    min-width: 400px;
+    min-height: 500px; 
+
+    @include small {
+        height: 1300px;
+    }
+    
+
+    h1 {
+        text-align: center;
+        /*border-style: solid;*/
+        width: 500px;
+        margin: 10px auto;
+        font-family: $font-paragraph;
+        font-weight: $font-weight-standard;
+        color: $primary-color;
+        line-height: 25px;
+
+        letter-spacing: $letter-space-standard;
+
+        @include small {
+           font-size: 30px;
+           width: 350px;
+        }
+    }
+}
+
+
+
+
+
+
+
+.wrapper {
+    align-content: right;
+    width: 100%;
+    padding: 10px;
+    margin: 100px auto 0px auto;
+    /*border-style: solid;*/
+}
+
+.wrapper h2 {
+    font-size: 50px;
+    text-justify: left;
+    margin-bottom: 30px;
+}
+
+.wrapper p {
+    text-align: center;
+}
+
+.wrapper button {
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-wrapper-item-2 {
+    display: grid;
+   
+    padding: 10px;
+    width: 30%;
+    /*height: 90%;*/
+    grid-template-columns: 1fr 11fr;
+    /*grid-template-columns: 1fr 4fr; */
+    margin: 10px auto;
+    min-width: 450px;
+}
+
+#contact {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0); 
+    padding: 30% 10px;
+    font-size: 10px;
+    margin: 0 auto;
+
+}
+
+
+#contact img{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    vertical-align: middle; 
+}
+
+
+#info {
+   border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    font-size: 10px;   
+    vertical-align: middle;
+    font-weight: 500;
+    
+}
+
+#info p{
+    font-size: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 550px) {
+
+.wrapper {
+    align-content: right;
+    width: 95%;
+    padding: 0px;
+    margin: 80px auto;
+}
+
+.wrapper h2 {
+    font-size: 30px;
+    text-justify: left;
+    margin-bottom: 30px;
+}
+
+.wrapper p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.wrapper button {
+    margin: 0 auto;
+}
+
+
+    .grid-wrapper-item-2 {
+        width: 95%;
+        min-width: 300px; 
+        padding: 5px;
+        
+        
+    }
+    
+    #contact img{
+        height: 45px;
+        width: 45px;
+    }
+
+    #info p{
+        font-size: 12px;
+        text-align: left;
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 350px) {
+
+  
+
+    .wrapper {
+        align-content: right;
+        width: 95%;
+        padding: 5px;
+        margin: 70px auto;
+    }
+    
+    .wrapper h2 {
+        font-size: 30px;
+        text-justify: left;
+        margin-bottom: 30px;
+    }
+    
+    .wrapper p {
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .wrapper button {
+        margin: 0 auto;
+    }
+    
+    
+        .grid-wrapper-item-2 {
+            padding: 5px;
+           
+        }
+        
+        #contact img{
+            height: 35px;
+            width: 35px;
+        }
+        
+        #info {
+            padding: 3px;
+        }
+        #info p{
+            font-size: 12px;
+            text-align: left;
+        }
+        
+    
+    }

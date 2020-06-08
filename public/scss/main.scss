@@ -95,12 +95,7 @@ body {
 /* ================== SIDEBAR NAVIGATOR =========================*/
 
 
-
-
-  /*================================*/
-
-
-
+/*================================*/
 
 
 
@@ -109,7 +104,7 @@ body {
     @include parallax();
     background-image: url('/Images/Layouts/dotted-colors-background.png');
     /*background-size: 100%;*/
-    height: 1080px;
+    height: 1100px;
     width: 100%;
     min-width: 400px;
     min-height: 500px; 
@@ -129,15 +124,24 @@ body {
         
         text-align: center;
         /*border-style: solid;*/
-        width: 50%;
+        width: 60%;
         margin: 10px auto;
         font-family: $font-paragraph;
-        line-height: 25px;
+        line-height: 40px;
+        font-size: 20px;
+        
+        b {
+            line-height: 50px;
+            letter-spacing: 5px;
+            font-family: Angella Narrow;
+            font-size:40px;
+        }
 
         @include small {
-            width: 300px;
+            width: 350px;
             margin: 50px auto;
-            font-size: 14px;
+            line-height: 25px;
+            font-size: 16px;
         }
 
         
@@ -148,7 +152,7 @@ body {
 
 
 
-#best-sellers{
+#standard-format{
    
     background-image: url('/Images/Layouts/manga-background.png');
     background-size: 100%;
@@ -160,7 +164,7 @@ body {
     min-height: 500px; 
 
     @include small {
-        height: 1380px;
+        height: 1500px;
     }
     
 
@@ -188,59 +192,123 @@ body {
         grid-template-columns: repeat(3, 1fr);
         width: 60%;
         margin: 100px auto 100px auto;
-
+    
+        grid-gap: 0px;
+    
         /*border-style: solid;*/
-
+    
         @include medium{
-            width: 70%;
+            width: 80%;
         }
-
+    
         @include small{
-            grid-template-columns: 0;
+            width: 175px;
+            grid-template-columns:0;
             grid-template-rows: repeat(3, 1fr);
-            width: 225px;
-        }
+            padding: 0px;
 
+            grid-gap: 30px;
+           
+        }
+    
         .grid{
             display: grid;
-            grid-gap: 10px;
+           /* grid-gap: 10px;
             /*grid-template-rows: repeat(2, 1fr);*/
             /*border-style: solid; */
             width: 220px;
-            
             margin: 0 auto;
             padding: 5px;
-
+            
+            @include small{
+                width: 147px;
+            }
+    
+            @include x-extra-small{
+                margin: 0px;
+            }
+    
+            
+    
             .grid-item{
-                /*border-style: solid; */
+               /*border-style: solid;*/
+                /*margin: 0 auto;*/
+                width: 217px;
+                margin: 0px;
+                margin-bottom: 50px;
                 margin: 0 auto;
+    
+                @include medium{
+                    width: 197px;
+                }
+    
+                @include small{
+                    width: 157px;
+                }
                 
-
+    
                 .price{
                     display: inline-block;
                     /*width: 107px;
                     height: 107px;*/
-                    line-height: 25px;
+                    line-height: 27px;
                     text-align: center;
-
+    
                     background: red;
                     border-radius: 100%;
                     height: 62px;
                     width: 62px;
                     float: left;
-
+    
                     padding-left: 12px;
                     padding-right: 5px;
                     padding-top: 8px;
                 
-
+    
                     font-size: 35px;
                     font-family: Century Gothic;
                     font-weight: bold;
-
+    
                     color: white;
+    
+                       @include medium{
+                            width: 57px;
+                            height: 57px;
+                            font-size: 27px;
+                        }
+    
+                        @include small{
+                            width: 52px;
+                            height: 52px;
+                            font-size: 25px;
+                        }
+    
+                        .three-digits{
+                            font-size: 28px;
+                            transform: scale(.9, 1.2);
+                            padding-left: 0px;
+                            padding-right: 0px;
+                            padding-top: 10px;
+                            /* border-style: solid; */
+                            width: 40px;
+                            
+    
+                            @include medium{
+                                font-size: 23px;
+                                transform: scale(1.0, 1.1);
+                            }
+        
+                            @include small{
+                                width: 30px;
+                                font-size: 19px;
+                                padding-top: 0px;
+                                transform: scale(1.1, 1.3);
+                            }
+                        }
+            
+                       
                 
-
+    
                     span{
                         font-size: 12px;
                         line-height: 15px;
@@ -248,61 +316,90 @@ body {
                         float: left;
                         font-weight: bold;
                         font-family: Century Gothic;
-
+    
                         color: white;
+    
+                        @include medium{
+                            
+                            font-size: 9px;
+                            line-height: 9px;
+                        }
                 
                     }
                 }
-
-
-
+    
+    
+    
                 .price-two{
                     @extend .price;
                     float: right;
                 }
-
+    
                 .menu{
-                    background-image: url('/Images/Lemonade/Classic Lemonade.jpg');
+                    /*background-image: url('/Images/Lemonade/Classic Lemonade.jpg');*/
                     background-size: 210px;
+                    background-position:top;
                     height: 210px;
                     width: 210px;
                     border-radius: 100%;
                     
                     border-style: solid;
-
+    
                     border-color: $active-color;
                     transition: $transition-time;
-
+    
                     &:hover{
                         background-size: 230px;
                         transition: $transition-time;
                     }
-
+    
                     @include medium{
+                        background-size: 190px;
                        height: 190px;
                        width:190px;
+    
+                       &:hover{
+                        background-size: 205px;
+                        transition: $transition-time;
                     }
-
-
+                    }
+    
+                    @include small{
+                        background-size: 150px;
+                        height: 150px;
+                        width:150px;
+    
+                        &:hover{
+                            background-size: 160px;
+                            transition: $transition-time;
+                        }
+                    }
+    
+    
                 }
-
+    
                 .name{
                     margin-top: 20px;
-
+    
                     font-family: $font-paragraph;
-                    font-weight: 600;
+                    font-weight: 700;
                     font-size: 18px;
-
+    
                     text-align: center;
+    
+                   /*border-style: solid;*/
 
-                    /*border-style: solid;*/
+                   @include small{
+                    font-size: 14px;
+                   }
+                   
                 }
             }
-
+    
             
-
+    
         }
-
+    
     }
 
 
@@ -342,4 +439,9 @@ body {
     
 
 }
+
+
+
+
+
 

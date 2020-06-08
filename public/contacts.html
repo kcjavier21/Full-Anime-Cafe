@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <title>Full Anime Cafe - Contacts</title>
+</head>
+<body>
+
+     
+    <div id = "header">
+
+        <img src = "./Images/Layouts/Logo-text-only.png">
+        <a href = "https://www.facebook.com/Full-Anime-Cafe-111737960164278" target = "_blank"><img src = "./Images/Layouts/fb blue logo.png"></a>
+
+        <div id = "nav">
+            <a href = "./home.html">HOME</a>
+            <a href = "./about.html">ABOUT</a>
+            <a href = "./menu.html">MENU</a>
+            <a href = ""><b>CONTACTS</b></a>
+        </div>
+
+        <div id="sidebar">
+             
+            <ul>
+              <li><a href = "./home.html">HOME</a></li>
+              <li><a href = "./about.html">ABOUT</a></li>
+              <li><a href = "./menu.html">MENU</a></li>
+              <li><a href = "">CONTACTS</a></li>
+            </ul>
+          </div>
+
+        
+
+     </div> 
+     <a href="#menu">
+     <div id="toggle-btn" onclick="toggleSidebar(this)">
+        
+            <span></span>
+            <span></span>
+            <span></span>
+        
+    </div>
+</a>
+
+
+
+<div id = "standard-format">
+
+    <h1>KEEP IN <b>TOUCH</b></h1>
+
+    <div class = wrapper>
+
+    
+
+    <div class = "grid-wrapper-item-2 animate-zoom">
+        <div id = "contact">
+           
+            <img src = "./Images/Icons/phone.png">
+        </div>
+        <div id = info>
+            <br><br>
+            <p>0929-200-8882</p>
+            
+        </div>
+
+    </div>
+
+        <div class = "grid-wrapper-item-2 animate-zoom">
+                
+            <div id = "contact">
+                
+                <img src = "./Images/Icons/location.png">
+            </div>
+            <div id = info>
+                <br>
+                <p>Robinsons Townville Meycauayan, Ema Town Center, El Camino Real, Sto. Nino, Meycauayan City, Bulacan</p>
+            </div>
+    
+        </div>
+
+    <div class = "grid-wrapper-item-2 animate-zoom"> 
+        <div id = "contact">
+            
+            <img src = "./Images/Icons/fb-red.png">
+        </div>
+        <div id = info>
+            <br><br>
+            <p>facebook.com/FullAnimeCafe</p>
+           
+        </div>
+
+    </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+ </div>
+
+ <div id = "footer">
+    <p>© Full Anime Cafe 2020 | All rights reserved</p>
+</div>
+
+
+ 
+<script>
+
+    function toggleSidebar(ref) {
+           ref.classList.toggle('active');
+           document.getElementById('sidebar').classList.toggle('active');
+   }
+   
+   </script>
+
+    
+</body>
+</html>

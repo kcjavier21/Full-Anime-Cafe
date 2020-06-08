@@ -249,67 +249,10 @@ body {
   color: yellow;
 }
 
-/* ================== SIDEBAR NAVIGATOR =========================*/
-/*================================*/
-#intro {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/Images/Layouts/dotted-colors-background.png");
-  /*background-size: 100%;*/
-  height: 1100px;
-  width: 100%;
-  min-width: 400px;
-  min-height: 500px;
-}
-
-#intro img {
-  display: -ms-grid;
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
-  /*border-style: solid;*/
-  height: 500px;
-  padding-top: 150px;
-}
-
-@media (max-width: 800px) {
-  #intro img {
-    height: 400px;
-  }
-}
-
-#intro p {
-  text-align: center;
-  /*border-style: solid;*/
-  width: 60%;
-  margin: 10px auto;
-  font-family: Corbel;
-  line-height: 40px;
-  font-size: 20px;
-}
-
-#intro p b {
-  line-height: 50px;
-  letter-spacing: 5px;
-  font-family: Angella Narrow;
-  font-size: 40px;
-}
-
-@media (max-width: 800px) {
-  #intro p {
-    width: 350px;
-    margin: 50px auto;
-    line-height: 25px;
-    font-size: 16px;
-  }
-}
-
 #standard-format {
   background-image: url("/Images/Layouts/manga-background.png");
   background-size: 100%;
-  height: 1080px;
+  height: 3160px;
   width: 100%;
   padding-top: 180px;
   min-width: 400px;
@@ -318,7 +261,7 @@ body {
 
 @media (max-width: 800px) {
   #standard-format {
-    height: 1500px;
+    height: 2580px;
   }
 }
 
@@ -340,7 +283,25 @@ body {
   }
 }
 
-#standard-format .grid-container {
+#standard-format h2 {
+  font-family: Angella Narrow;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 10px;
+  margin: 100px auto 10px auto;
+  text-shadow: 0px 0px 0 #f70000, 1px 1px 0 #ee0000, 2px 2px 0 #e60000, 3px 3px 0 #de0000, 4px 4px 0 #d50000, 5px 5px 0 #cd0000, 6px 6px 0 #c50000, 7px 7px 6px rgba(255, 0, 0, 0.6), 7px 7px 1px rgba(255, 0, 0, 0.5), 0px 0px 6px rgba(255, 0, 0, 0.2);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+}
+
+#standard-format #lemon {
+  text-shadow: 0px 0px 0 #c9d800, 1px 1px 0 #c0cf00, 2px 2px 0 #b8c700, 3px 3px 0 #b0bf00, 4px 4px 0 #a7b600, 5px 5px 0 #9fae00, 6px 6px 0 #97a600, 7px 7px 6px rgba(209, 224, 0, 0.6), 7px 7px 1px rgba(209, 224, 0, 0.5), 0px 0px 6px rgba(209, 224, 0, 0.2);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d1e000;
+}
+
+.grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -352,28 +313,27 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container {
+  .grid-container {
     width: 80%;
   }
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container {
-    width: 175px;
-    -ms-grid-columns: 0;
-        grid-template-columns: 0;
+  .grid-container {
+    width: 90%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
     padding: 0px;
-    grid-gap: 30px;
   }
 }
 
-#standard-format .grid-container .grid {
+.grid-container .grid {
   display: -ms-grid;
   display: grid;
   /* grid-gap: 10px;
-            /*grid-template-rows: repeat(2, 1fr);*/
+        /*grid-template-rows: repeat(2, 1fr);*/
   /*border-style: solid; */
   width: 220px;
   margin: 0 auto;
@@ -381,42 +341,41 @@ body {
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container .grid {
+  .grid-container .grid {
     width: 147px;
   }
 }
 
 @media (max-width: 450px) {
-  #standard-format .grid-container .grid {
+  .grid-container .grid {
     margin: 0px;
   }
 }
 
-#standard-format .grid-container .grid .grid-item {
+.grid-container .grid .grid-item {
   /*border-style: solid;*/
   /*margin: 0 auto;*/
   width: 217px;
   margin: 0px;
   margin-bottom: 50px;
-  margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container .grid .grid-item {
+  .grid-container .grid .grid-item {
     width: 197px;
   }
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container .grid .grid-item {
+  .grid-container .grid .grid-item {
     width: 157px;
   }
 }
 
-#standard-format .grid-container .grid .grid-item .price, #standard-format .grid-container .grid .grid-item .price-two {
+.grid-container .grid .grid-item .price, .grid-container .grid .grid-item .price-two {
   display: inline-block;
   /*width: 107px;
-                    height: 107px;*/
+                height: 107px;*/
   line-height: 27px;
   text-align: center;
   background: red;
@@ -434,7 +393,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container .grid .grid-item .price, #standard-format .grid-container .grid .grid-item .price-two {
+  .grid-container .grid .grid-item .price, .grid-container .grid .grid-item .price-two {
     width: 57px;
     height: 57px;
     font-size: 27px;
@@ -442,14 +401,14 @@ body {
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container .grid .grid-item .price, #standard-format .grid-container .grid .grid-item .price-two {
+  .grid-container .grid .grid-item .price, .grid-container .grid .grid-item .price-two {
     width: 52px;
     height: 52px;
     font-size: 25px;
   }
 }
 
-#standard-format .grid-container .grid .grid-item .price .three-digits, #standard-format .grid-container .grid .grid-item .price-two .three-digits {
+.grid-container .grid .grid-item .price .three-digits, .grid-container .grid .grid-item .price-two .three-digits {
   font-size: 28px;
   -webkit-transform: scale(0.9, 1.2);
           transform: scale(0.9, 1.2);
@@ -461,7 +420,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container .grid .grid-item .price .three-digits, #standard-format .grid-container .grid .grid-item .price-two .three-digits {
+  .grid-container .grid .grid-item .price .three-digits, .grid-container .grid .grid-item .price-two .three-digits {
     font-size: 23px;
     -webkit-transform: scale(1, 1.1);
             transform: scale(1, 1.1);
@@ -469,7 +428,7 @@ body {
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container .grid .grid-item .price .three-digits, #standard-format .grid-container .grid .grid-item .price-two .three-digits {
+  .grid-container .grid .grid-item .price .three-digits, .grid-container .grid .grid-item .price-two .three-digits {
     width: 30px;
     font-size: 19px;
     padding-top: 0px;
@@ -478,7 +437,7 @@ body {
   }
 }
 
-#standard-format .grid-container .grid .grid-item .price span, #standard-format .grid-container .grid .grid-item .price-two span {
+.grid-container .grid .grid-item .price span, .grid-container .grid .grid-item .price-two span {
   font-size: 12px;
   line-height: 15px;
   /*border-style: solid;*/
@@ -489,17 +448,17 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container .grid .grid-item .price span, #standard-format .grid-container .grid .grid-item .price-two span {
+  .grid-container .grid .grid-item .price span, .grid-container .grid .grid-item .price-two span {
     font-size: 9px;
     line-height: 9px;
   }
 }
 
-#standard-format .grid-container .grid .grid-item .price-two {
+.grid-container .grid .grid-item .price-two {
   float: right;
 }
 
-#standard-format .grid-container .grid .grid-item .menu {
+.grid-container .grid .grid-item .menu {
   /*background-image: url('/Images/Lemonade/Classic Lemonade.jpg');*/
   background-size: 210px;
   background-position: top;
@@ -512,19 +471,19 @@ body {
   transition: 500ms;
 }
 
-#standard-format .grid-container .grid .grid-item .menu:hover {
+.grid-container .grid .grid-item .menu:hover {
   background-size: 230px;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
 
 @media (max-width: 1200px) {
-  #standard-format .grid-container .grid .grid-item .menu {
+  .grid-container .grid .grid-item .menu {
     background-size: 190px;
     height: 190px;
     width: 190px;
   }
-  #standard-format .grid-container .grid .grid-item .menu:hover {
+  .grid-container .grid .grid-item .menu:hover {
     background-size: 205px;
     -webkit-transition: 500ms;
     transition: 500ms;
@@ -532,60 +491,24 @@ body {
 }
 
 @media (max-width: 800px) {
-  #standard-format .grid-container .grid .grid-item .menu {
+  .grid-container .grid .grid-item .menu {
     background-size: 150px;
     height: 150px;
     width: 150px;
   }
-  #standard-format .grid-container .grid .grid-item .menu:hover {
+  .grid-container .grid .grid-item .menu:hover {
     background-size: 160px;
     -webkit-transition: 500ms;
     transition: 500ms;
   }
 }
 
-#standard-format .grid-container .grid .grid-item .name {
+.grid-container .grid .grid-item .name {
   margin-top: 20px;
   font-family: Corbel;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   text-align: center;
   /*border-style: solid;*/
 }
-
-@media (max-width: 800px) {
-  #standard-format .grid-container .grid .grid-item .name {
-    font-size: 14px;
-  }
-}
-
-#standard-format .btn-menu {
-  width: 205px;
-  margin: 0 auto;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /*border-style: solid;*/
-}
-
-#standard-format .btn-menu button {
-  width: 200px;
-  height: 50px;
-  background: red;
-  color: yellow;
-  border-radius: 20px;
-  font-family: Corbel;
-  font-weight: bold;
-  font-size: 20px;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
-#standard-format .btn-menu button:hover {
-  background: #c80000;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=menu.css.map */
