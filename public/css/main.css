@@ -169,6 +169,17 @@ input {
   background-color: red;
 }
 
+@font-face {
+  font-family: "Angella Outline";
+  src: url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.eot");
+  src: url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.woff") format("woff"), url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0509a9f28544fda33c92284e2df4e8e7.svg#Angella Outline") format("svg");
+}
+
+@font-face {
+  font-family: Angella Narrow;
+  src: url(../../public/fonts/Angella_Narrow_demo.otf) format("truetype");
+}
+
 body {
   background: #e2e2e2;
 }
@@ -307,7 +318,7 @@ body {
 }
 
 #standard-format {
-  background-image: url("/Images/Layouts/manga-background.png");
+  background-image: url("./Images/Layouts/manga-background.png");
   background-size: 100%;
   height: 1080px;
   width: 100%;
